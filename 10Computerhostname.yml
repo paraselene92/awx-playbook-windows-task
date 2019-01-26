@@ -1,0 +1,10 @@
+- name: No09 Disable Bitlocker
+  hosts: all
+  gather_facts: false
+  tasks:
+    - win_hostname:
+        name: sample-hostname
+      register: res
+  
+    - debug: var=res
+  
