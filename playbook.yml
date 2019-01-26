@@ -1,0 +1,19 @@
+- name: Windows task
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Windows Update
+      win_updates:
+        category_names: ['SecurityUpdates']
+      register: result
+  
+    - debug: var=result
+    
+    - win_reboot:
+      when: result.reboot_required
+    
+    - name: Install Firefox
+      win_chocolatey:
+        name: firefox
+        state: present
+        
