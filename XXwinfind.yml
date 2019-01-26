@@ -8,5 +8,5 @@
       register: res
   
     #- debug: var=res.files[].filename
-    - debug: var=res.changed
+    - debug: var=res.files[0].filename
   
