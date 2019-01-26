@@ -1,0 +1,15 @@
+- name: Windows task
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: No8 Delete File
+      win_command: {{ items }}
+      with_items:
+        ##- del C:\File_Kanrenzuke_Import.bat
+        ##- del C:\AppAssoc.xml
+        ##- del C:\Sysprep.bat
+        ##- del C:\Windows\System32\Sysprep\Unattend.xml
+        ##- del C:\Windows\Setup\Scripts\SetupComplete.cmd
+        - del C:\Users\Administrator\Desktop\file1.txt
+        - del C:\Users\Administrator\Desktop\file2.txt
+        
