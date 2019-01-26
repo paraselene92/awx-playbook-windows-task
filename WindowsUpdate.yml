@@ -4,10 +4,7 @@
   tasks:
     - name: Windows Update
       win_updates:
-        category_names: ['SecurityUpdates']
+        ##category_names: ['SecurityUpdates']
       register: result
   
     - debug: var=result
-    
-    - win_reboot:
-      when: result.reboot_required
