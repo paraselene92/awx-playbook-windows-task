@@ -3,13 +3,13 @@
   gather_facts: false
   tasks:
     - name: No8 Delete File
-      win_command: "{{ item }}"
+      win_command: del "{{ item }}"
       with_items:
         ##- del C:\File_Kanrenzuke_Import.bat
         ##- del C:\AppAssoc.xml
         ##- del C:\Sysprep.bat
         ##- del C:\Windows\System32\Sysprep\Unattend.xml
         ##- del C:\Windows\Setup\Scripts\SetupComplete.cmd
-        - "del C:\Users\Administrator\Desktop\file1.txt"
-        - "del C:\Users\Administrator\Desktop\file2.txt"
+        - C:\Users\Administrator\Desktop\file1.txt
+        - C:\Users\Administrator\Desktop\file2.txt
         
