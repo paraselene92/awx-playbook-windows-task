@@ -2,10 +2,10 @@
   hosts: all
   gather_facts: false
   tasks:
-  - name: Find files in path
-    win_find:
-      paths: C:\Users\Administrator\Desktop
-    regsiter: res
+    - name: Find files in path
+      win_find:
+        paths: C:\Users\Administrator\Desktop
+      regsiter: res
   
-  - debug: var=res
+    - debug: var=res
   
