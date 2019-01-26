@@ -3,10 +3,7 @@
   gather_facts: false
   tasks:
     - name: Find files in path
-      win_find:
-        paths: C:\Users\Administrator\Desktop
-      register: res
-  
-    #- debug: var=res.files[].filename
-    - debug: var=res.files[0].filename
-  
+      debug: msg="{{ item }}"
+      with_fileglob
+        - C:\Users\Administrator\Desktop\*
+       
