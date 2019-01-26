@@ -3,5 +3,5 @@
   gather_facts: false
   tasks:
     - name: No6 Sysprep
-      win_command: C:\Windows\System32\Sysprep\sysprep
+      win_command: C:\Windows\System32\Sysprep\sysprep /generalize /oobe /reboot /unattend:Unattend.xml
       
