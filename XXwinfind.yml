@@ -5,4 +5,7 @@
   - name: Find files in path
     win_find:
       paths: C:\Users\Administrator\Desktop
-      
+    regsiter: res
+  
+  - debug: var=res
+  
