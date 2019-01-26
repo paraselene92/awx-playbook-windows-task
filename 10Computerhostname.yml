@@ -1,9 +1,9 @@
-- name: No09 Disable Bitlocker
+- name: No10 ComputerHostName Change
   hosts: all
   gather_facts: false
   tasks:
     - win_hostname:
-        name: sample-hostname
+        name: "{{ newhost }}"
       register: res
   
     - debug: var=res
