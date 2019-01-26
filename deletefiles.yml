@@ -3,7 +3,7 @@
   gather_facts: false
   tasks:
     - name: No8 Delete File
-      win_command: {{ item }}
+      win_command: "{{ item }}"
       with_items:
         ##- del C:\File_Kanrenzuke_Import.bat
         ##- del C:\AppAssoc.xml
