@@ -10,6 +10,6 @@
         ##- del C:\Sysprep.bat
         ##- del C:\Windows\System32\Sysprep\Unattend.xml
         ##- del C:\Windows\Setup\Scripts\SetupComplete.cmd
-        - del C:\Users\Administrator\Desktop\file1.txt
-        - del C:\Users\Administrator\Desktop\file2.txt
+        - "del C:\Users\Administrator\Desktop\file1.txt"
+        - "del C:\Users\Administrator\Desktop\file2.txt"
         
