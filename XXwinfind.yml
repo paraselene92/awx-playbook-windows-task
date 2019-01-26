@@ -4,6 +4,6 @@
   tasks:
     - name: Find files in path
       debug: msg="{{ item }}"
-      with_fileglob
+      with_fileglob:
         - C:\Users\Administrator\Desktop\*
        
