@@ -7,7 +7,7 @@
       register: res
   
     - win_reboot:
-        reboot_timeout: 30
+        reboot_timeout: 120
       when: res.reboot_required == true
     
     - local_action: wait_for host=192.168.100.168 port=5986 delay=30
@@ -18,7 +18,7 @@
       register: res_second
 
     - win_reboot:
-        reboot_timeout: 30
+        reboot_timeout: 120
       when: res_second.reboot_required == true
 
     - local_action: wait_for host=192.168.100.168 port=5986 delay=30
