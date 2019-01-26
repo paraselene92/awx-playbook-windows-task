@@ -1,0 +1,7 @@
+- name: 06 sysprep
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: No6 Sysprep
+      win_command: C:\Windows\System32\Sysprep\sysprep
+      
