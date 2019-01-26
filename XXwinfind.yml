@@ -1,0 +1,8 @@
+- name: Windows task
+  hosts: all
+  gather_facts: false
+  tasks:
+  - name: Find files in path
+    win_find:
+      paths: C:\Users\Administrator\Desktop
+      
