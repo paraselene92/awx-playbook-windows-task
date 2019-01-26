@@ -8,3 +8,9 @@
   
     - debug: var=res
   
+    - win_reboot:
+      when: res.reboot_required == true
+    
+    - local_action: wait_for host=192.168.100.168 port=5986 delay=30
+      when: res.reboot_required == true
+      
