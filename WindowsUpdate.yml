@@ -5,7 +5,7 @@
     - name: Windows Update
       win_updates:
         ##category_names: ['SecurityUpdates']
+        log_path: C:\Users\Administrator\Desktop\wu.txt
       register: result
-      log_path: C:\Users\Administrator\Desktop\wu.txt
   
     - debug: var=result
