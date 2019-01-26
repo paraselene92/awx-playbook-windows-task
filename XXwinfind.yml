@@ -7,5 +7,5 @@
         paths: C:\Users\Administrator\Desktop
       register: res
   
-    - debug: var=res[].filename
+    - debug: var=res.files.filename
   
