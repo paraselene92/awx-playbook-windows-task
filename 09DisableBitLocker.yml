@@ -2,8 +2,13 @@
   hosts: all
   gather_facts: false
   tasks:
-    - name: No9 Disable BitLocker
-      win_command: manage-bde -status c:
-      register: result
+    ##- name: No9 Disable BitLocker
+    ##  win_command: manage-bde -status c:
+    ##  register: result
   
-    - debug: var=result
+    ##- debug: var=result
+
+    - name: powershell
+      win_command: powershell.exe -
+      args:
+        stdin: Write-Host test
