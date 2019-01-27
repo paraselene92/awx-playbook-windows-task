@@ -1,0 +1,12 @@
+- name: No7 LocalAdministrator Config
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Copy PowershellScript
+      win_copy: 
+        src: ../07LocalAdministratorConfig.ps1
+        dest: "C:\temp"
+    
+    - name: LocalAdministratorConfig
+      win_command: powershell.exe -ExecutionPolicy ByPass -File C:/temp/07LocalAdministratorConfig.ps1
+      
